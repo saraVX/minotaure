@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diaporama : Le Mythe du Minotaure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        .slideshow-container {
+            max-width: 1200px;
+            position: relative;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .mySlides {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .mySlides h1, .mySlides h2 {
+            font-family: 'Playfair Display', serif;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .mySlides p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+        .mySlides img {
+            max-width: 70%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            transition: 0.3s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(44, 62, 80, 0.7);
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(44, 62, 80, 1);
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+        .text-center {
+            text-align: center;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        /* Thème mythologie grecque renforcé */
+        .slideshow-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/greek-vase.png') repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        .slideshow-container {
+            border: 5px solid #d4af37; /* Or pour un thème mythologique */
+        }
+    </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <h1>Le Mythe du Minotaure</h1>
+        <h2>Présenté par Sarah Ramdani</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Minotauros_Myron_NAMA_1664_n1.jpg/800px-Minotauros_Myron_NAMA_1664_n1.jpg" alt="Statue antique du Minotaure">
+        <p>Exposé sur l'histoire, l'origine et le symbolisme du Minotaure, avec un focus sur les relations entre animaux et humains.</p>
+    </div>
+
+    <div class="mySlides fade">
+        <h2>Slide 1 : Introduction et Définition</h2>
+        <p><strong>Définition</strong> : Le Minotaure (ou Minotauros en grec ancien) est une créature hybride de la mythologie grecque, mi-homme mi-taureau. Il symbolise souvent la bestialité et la monstruosité issue d'une union contre nature.</p>
+        <img src="https://www.meisterdrucke.ie/kunstwerke/1260px/Greek_-_Theseus_Fighting_the_Minotaur_detail_from_an_Attic_black-figure_amphora_%28pottery_-_%28MeisterDrucke-301456%29.jpg" alt="Peinture sur vase grec ancien représentant Thésée et le Minotaure">
+    </div>
+
+    <div class="mySlides fade">
+        <h2>Slide 2 : Histoire et Origine</h2>
+        <p><strong>Origine</strong> : Le mythe trouve ses racines dans la civilisation minoenne de Crète, autour du IIe millénaire av. J.-C. Il est associé au palais de Knossos, souvent identifié comme le labyrinthe légendaire. Selon la légende, le Minotaure est né de l'union de Pasiphaé (femme du roi Minos) avec un taureau envoyé par Poséidon, en punition divine.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Knossos_-_North_Portico_02.jpg" alt="Ruines du palais de Knossos en Crète, berceau du mythe">
+    </div>
+
+    <div class="mySlides fade">
+        <h2>Slide 3 : Le Récit du Mythe (Développement de l'Histoire)</h2>
+        <p><strong>Histoire détaillée</strong> : Le roi Minos fit construire un labyrinthe par Dédale pour y enfermer le Minotaure. Chaque année, Athènes devait envoyer sept jeunes garçons et sept jeunes filles en sacrifice à la bête. Thésée, héros athénien, se porta volontaire, entra dans le labyrinthe avec l'aide d'Ariane (fille de Minos) et son fil, tua le Minotaure et s'échappa.</p>
+        <img src="https://www.hellenic-art.com/wp-content/uploads/2023/08/theseus.jpg" alt="Thésée combattant le Minotaure dans une œuvre classique">
+    </div>
+
+    <div class="mySlides fade">
+        <h2>Slide 4 : Symbolisme dans la Littérature et la Philosophie</h2>
+        <p><strong>Dans la littérature</strong> : Le mythe est raconté dans les Métamorphoses d'Ovide ou réinterprété de manière moderne par Jorge Luis Borges dans "La Maison d'Astérion", où le Minotaure est vu comme une figure solitaire et tragique.</p>
+        <p><strong>Dans la philosophie</strong> : Il représente la dualité humaine – la raison contre l'instinct animal. Des penseurs comme Nietzsche y voient le "monstre intérieur" de l'homme, explorant les thèmes de la civilisation versus la barbarie, ou la fusion entre humanité et animalité.</p>
+        <img src="https://allthatsinteresting.com/wordpress/wp-content/uploads/2024/04/what-is-the-minotaur-featured.jpg" alt="Art ancien grec symbolisant la dualité homme-animal pour le Minotaure">
+    </div>
+
+    <div class="mySlides fade">
+        <h2>Slide 5 : Symbolisme dans l'Art et la Musique</h2>
+        <p><strong>Dans l'art</strong> : Le Minotaure inspire de nombreuses œuvres, des vases antiques aux peintures modernes. Pablo Picasso, par exemple, l'utilise dans ses gravures pour explorer la violence, la sexualité et l'hybridité.</p>
+        <img src="https://cdn.thecollector.com/wp-content/uploads/2022/09/picasso-minotaur-with-dead-mare-1-1.jpg?width=1057&quality=100&dpr=2" alt="Œuvre de Pablo Picasso représentant le Minotaure dans un thème mythologique grec">
+        <p><strong>Dans la musique</strong> : Il apparaît dans des opéras comme "Ariane et Barbe-Bleue" de Paul Dukas, ou des compositions contemporaines inspirées du labyrinthe, symbolisant le chaos et la quête intérieure.</p>
+    </div>
+
+    <div class="mySlides fade">
+        <h2>Slide 6 : Symbolisme dans le Cinéma</h2>
+        <p><strong>Dans le cinéma</strong> : Le Minotaure est adapté dans des films comme "Immortals" (2011) ou "Minotaur" (2006), où il incarne la terreur primitive. Ces représentations soulignent souvent le thème de la confrontation entre l'homme civilisé et la bête sauvage.</p>
+        <img src="https://i.ytimg.com/vi/w29PG-8Tywo/maxresdefault.jpg" alt="Scène du Minotaure dans un film moderne">
+    </div>
+
+    <div class="mySlides fade">
+        <h2>Slide 7 : Conclusion - Retour au Thème Principal : Les Animaux et Nous</h2>
+        <p>Le mythe du Minotaure nous renvoie au thème central des relations entre les animaux et les humains. En tant qu'hybride, il symbolise la frontière floue entre l'homme et l'animal : la "bête en nous", les instincts primaires refoulés par la société, ou encore les peurs liées à l'altérité. Dans un monde moderne, il questionne notre rapport à la nature, à l'animalité intérieure, et aux hybrides (comme dans la bioéthique ou l'écologie). Le Minotaure nous rappelle que l'humain n'est pas si éloigné de l'animal, invitant à une réflexion sur l'empathie, la domination et la cohabitation.</p>
+        <img src="https://smarthistory.org/wp-content/uploads/2024/05/comparison-2.jpg" alt="Art symbolique d’un hybride humain-animal inspiré du Minotaure">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<div class="text-center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+    <span class="dot" onclick="currentSlide(6)"></span> 
+    <span class="dot" onclick="currentSlide(7)"></span> 
+    <span class="dot" onclick="currentSlide(8)"></span> 
+</div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
+</body>
+</html>
